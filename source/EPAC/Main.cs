@@ -105,11 +105,6 @@ namespace EPAC
                     episode = new Episode();
                 }
 
-                if (line.Contains("</table>"))
-                {
-                    break;
-                }
-
                 if (line.Contains("<th scope=\"row\" id=\"ep"))
                 {
                     int start = line.IndexOf(">") + 1;
