@@ -39,7 +39,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPageParse = new System.Windows.Forms.TabPage();
             this.groupBoxSource = new System.Windows.Forms.GroupBox();
+            this.radioButtonWiki = new System.Windows.Forms.RadioButton();
+            this.radioButtonImdb = new System.Windows.Forms.RadioButton();
             this.buttonParse = new System.Windows.Forms.Button();
+            this.textBoxWiki = new System.Windows.Forms.TextBox();
             this.textBoxImdb = new System.Windows.Forms.TextBox();
             this.groupBoxPreview = new System.Windows.Forms.GroupBox();
             this.richTextBoxPreview = new System.Windows.Forms.RichTextBox();
@@ -66,9 +69,6 @@
             this.textBoxCopyPath = new System.Windows.Forms.TextBox();
             this.labelCopyPath = new System.Windows.Forms.Label();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
-            this.radioButtonImdb = new System.Windows.Forms.RadioButton();
-            this.radioButtonWiki = new System.Windows.Forms.RadioButton();
-            this.textBoxWiki = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,7 +144,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "v0.1.1";
+            this.label4.Text = "v0.1.2";
             // 
             // label3
             // 
@@ -195,6 +195,28 @@
             this.groupBoxSource.TabStop = false;
             this.groupBoxSource.Text = "Source:";
             // 
+            // radioButtonWiki
+            // 
+            this.radioButtonWiki.AutoSize = true;
+            this.radioButtonWiki.Location = new System.Drawing.Point(17, 61);
+            this.radioButtonWiki.Name = "radioButtonWiki";
+            this.radioButtonWiki.Size = new System.Drawing.Size(49, 17);
+            this.radioButtonWiki.TabIndex = 7;
+            this.radioButtonWiki.Text = "Wiki:";
+            this.radioButtonWiki.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonImdb
+            // 
+            this.radioButtonImdb.AutoSize = true;
+            this.radioButtonImdb.Checked = true;
+            this.radioButtonImdb.Location = new System.Drawing.Point(17, 30);
+            this.radioButtonImdb.Name = "radioButtonImdb";
+            this.radioButtonImdb.Size = new System.Drawing.Size(55, 17);
+            this.radioButtonImdb.TabIndex = 6;
+            this.radioButtonImdb.TabStop = true;
+            this.radioButtonImdb.Text = "IMDB:";
+            this.radioButtonImdb.UseVisualStyleBackColor = true;
+            // 
             // buttonParse
             // 
             this.buttonParse.Location = new System.Drawing.Point(676, 31);
@@ -205,13 +227,20 @@
             this.buttonParse.UseVisualStyleBackColor = true;
             this.buttonParse.Click += new System.EventHandler(this.buttonParse_Click);
             // 
+            // textBoxWiki
+            // 
+            this.textBoxWiki.Location = new System.Drawing.Point(78, 59);
+            this.textBoxWiki.Name = "textBoxWiki";
+            this.textBoxWiki.Size = new System.Drawing.Size(588, 20);
+            this.textBoxWiki.TabIndex = 3;
+            this.textBoxWiki.Enter += new System.EventHandler(this.textBoxWiki_Enter);
+            // 
             // textBoxImdb
             // 
             this.textBoxImdb.Location = new System.Drawing.Point(78, 28);
             this.textBoxImdb.Name = "textBoxImdb";
             this.textBoxImdb.Size = new System.Drawing.Size(588, 20);
             this.textBoxImdb.TabIndex = 3;
-            this.textBoxImdb.Text = "http://www.imdb.com/title/tt3114390/episodes?season=1&ref_=tt_eps_sn_1";
             this.textBoxImdb.Enter += new System.EventHandler(this.textBoxImdb_Enter);
             // 
             // groupBoxPreview
@@ -467,37 +496,6 @@
             this.imageListIcons.Images.SetKeyName(1, "search.png");
             this.imageListIcons.Images.SetKeyName(2, "plus.png");
             this.imageListIcons.Images.SetKeyName(3, "copy.png");
-            // 
-            // radioButtonImdb
-            // 
-            this.radioButtonImdb.AutoSize = true;
-            this.radioButtonImdb.Checked = true;
-            this.radioButtonImdb.Location = new System.Drawing.Point(17, 30);
-            this.radioButtonImdb.Name = "radioButtonImdb";
-            this.radioButtonImdb.Size = new System.Drawing.Size(55, 17);
-            this.radioButtonImdb.TabIndex = 6;
-            this.radioButtonImdb.TabStop = true;
-            this.radioButtonImdb.Text = "IMDB:";
-            this.radioButtonImdb.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonWiki
-            // 
-            this.radioButtonWiki.AutoSize = true;
-            this.radioButtonWiki.Location = new System.Drawing.Point(17, 61);
-            this.radioButtonWiki.Name = "radioButtonWiki";
-            this.radioButtonWiki.Size = new System.Drawing.Size(49, 17);
-            this.radioButtonWiki.TabIndex = 7;
-            this.radioButtonWiki.Text = "Wiki:";
-            this.radioButtonWiki.UseVisualStyleBackColor = true;
-            // 
-            // textBoxWiki
-            // 
-            this.textBoxWiki.Location = new System.Drawing.Point(78, 59);
-            this.textBoxWiki.Name = "textBoxWiki";
-            this.textBoxWiki.Size = new System.Drawing.Size(588, 20);
-            this.textBoxWiki.TabIndex = 3;
-            this.textBoxWiki.Text = "http://en.wikipedia.org/wiki/List_of_Kill_la_Kill_episodes";
-            this.textBoxWiki.Enter += new System.EventHandler(this.textBoxWiki_Enter);
             // 
             // Main
             // 
