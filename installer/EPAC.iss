@@ -1,20 +1,20 @@
-; -- Example1.iss --
-; Demonstrates copying 3 files and creating an icon.
-
-; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
+#define AppVersion "1.0.2"
+#define AppName "EPAC"
 
 [Setup]
-AppName=EPAC
-AppVersion=0.1.1
-DefaultDirName={pf}\EPAC
-DefaultGroupName=EPAC
-UninstallDisplayIcon={app}\EPAC.exe
+AppId=MyApp
+AppName={#AppName}
+AppVersion={#AppName}
+DefaultDirName={pf}\{#AppName}
+DefaultGroupName={#AppName}
+UninstallDisplayIcon={app}\{#AppName}.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=userdocs:Inno Setup Examples Output
 
 [Files]
-Source: "EPAC.exe"; DestDir: "{app}"
+Source: "{#AppName}.exe"; DestDir: "{app}"
 
 [Icons]
-Name: "{group}\EPAC"; Filename: "{app}\EPAC.exe"
+Name: "{commonprograms}\My Program"; Filename: "{app}\{#AppName}.exe"
+Name: "{commondesktop}\My Program"; Filename: "{app}\{#AppName}.exe"
