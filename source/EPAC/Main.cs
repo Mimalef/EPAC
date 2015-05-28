@@ -34,6 +34,7 @@ namespace EPAC
 
             using (WebClient client = new WebClient())
             {
+                client.Encoding = Encoding.UTF8;
                 try
                 {
                     htmlCode = client.DownloadString(address);
