@@ -205,11 +205,6 @@ namespace EPAC
             string[] dirs = Directory.GetDirectories(path);
             string[] files = Directory.GetFiles(path);
 
-            if (path[path.Length - 1] != '\\')
-            {
-                path += '\\';
-            }
-
             foreach (string f in files)
             {
                 if (f.Contains("-"))
