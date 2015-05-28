@@ -166,6 +166,11 @@ namespace EPAC
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             string path = textBoxPath.Text;
+            
+            if (path[path.Length - 1] != '\\')
+            {
+                path += '\\';
+            }
 
             foreach (Episode epi in this.episodes)
             {
@@ -199,6 +204,11 @@ namespace EPAC
 
             string[] dirs = Directory.GetDirectories(path);
             string[] files = Directory.GetFiles(path);
+
+            if (path[path.Length - 1] != '\\')
+            {
+                path += '\\';
+            }
 
             foreach (string f in files)
             {
