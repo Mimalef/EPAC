@@ -239,6 +239,8 @@ namespace EPAC
                                 richTextBoxCopyLog.Text += fileName;
                                 richTextBoxCopyLog.Text += "' is move to:\n";
                                 richTextBoxCopyLog.Text += d + "\\\n";
+
+                                break;
                             }
                         }
                     }
