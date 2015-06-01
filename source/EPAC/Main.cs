@@ -138,9 +138,9 @@ namespace EPAC
             
             res = pattern.Replace("[#]", epi.number).Replace("[name]", epi.name);
 
-            foreach (var c in Path.GetInvalidFileNameChars())
+            foreach (char c in Path.GetInvalidFileNameChars())
             {
-                res = res.Replace(c, '\0');
+                res = res.Replace(c.ToString(), "");
             }
 
             return res;
